@@ -21,7 +21,8 @@ class _ListScreenState extends State<ListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('List'),
+        title: const Text('Student List'),
+        backgroundColor: Colors.deepPurple,
       ),
       body: FutureBuilder<List<Map<String, dynamic>>>(
         future: _students,

@@ -21,7 +21,7 @@ class DBHelper {
       version: 1,
       onCreate: (db, version) async {
         await db.execute('''
-          CREATE TABLE students(
+          CREATE TABLE students (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             studentId TEXT,
             name TEXT
@@ -31,7 +31,7 @@ class DBHelper {
     );
   }
 
-  Future<void> insertStudent(Map<String, dynamic> student) async {
+  Future<void> insertStudent(Map<String, String> student) async {
     final db = await database;
     await db.insert('students', student);
   }
